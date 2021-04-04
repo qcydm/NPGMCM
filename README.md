@@ -9,3 +9,4 @@ batch_size=64
 验证集loss随epoch先降低后升高，故在序列长度为3情况下最优epoch为10左右。  
 未调参的DLSTM模型预测MAPE大致保持在20%左右（最高为25%），调参后MAPE稳定在13％以下，\.  
 最后模型平均绝对百分比误差MAPE达到了12％(预测精度接近90%)，好过回归和ANN。
+![PANN 1YX_G ` S4`BD}4 MU](https://user-images.githubusercontent.com/42266769/113497877-7fd15880-953a-11eb-8dd2-ee74a5954e78.png)
