@@ -1,12 +1,11 @@
 # Mathematical-modeling-contest-for-Postgraduates
-模型代码
-3层LSTM(每层units128,256,128，每层dropout0.3,0.5,0.3)和一层全连接Dense。  
-调参后，最优参数为：  
-不进行shuffle（shuffle模型拟合能力显著下降，侧面说明了序列的时序相关性）  
-输入序列长度（数据帧）设置为3  
-优化器为带动量的SGD(lr=0.015，学习率衰减=1e-6)  
-batch_size=64  
-验证集loss随epoch先降低后升高，故在序列长度为3情况下最优epoch为10左右。  
-未调参的DLSTM模型预测MAPE大致保持在20%左右（最高为25%），调参后MAPE稳定在13％以下，\.  
-最后模型平均绝对百分比误差MAPE达到了12％(预测精度接近90%)，好过回归和ANN。
+Model code 3-layer LSTM (units 128, 256, 128 per layer, dropout 0.3, 0.5, 0.3 per layer) and one layer of fully connected Dense.
+After tuning, the optimal parameters are:
+No shuffle (the shuffle model's fitting ability is significantly reduced, which shows the time series correlation of the sequence)
+Input sequence length (dataframe) set to 3
+The optimizer is SGD with momentum (lr=0.015, learning rate decay=1e-6)
+batch_size=64
+The validation set loss first decreases and then increases with the epoch, so the optimal epoch is about 10 when the sequence length is 3.
+The DLSTM model without parameter adjustment predicts that MAPE is roughly maintained at around 20% (the highest is 25%), and MAPE stabilizes below 13% after parameter adjustment.\.  
+Finally, the average absolute percentage error MAPE of the model reaches 12% (prediction accuracy is close to 90%), which is better than regression and ANN.
 ![PANN 1YX_G ` S4`BD}4 MU](https://user-images.githubusercontent.com/42266769/113497877-7fd15880-953a-11eb-8dd2-ee74a5954e78.png)
